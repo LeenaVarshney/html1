@@ -1,0 +1,439 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>urban admin</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<!--<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">-->
+	<meta name="theme-color" content="#dce4e7" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.css" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/plugin/cropper-master/dist/cropper.min.css">
+	<link rel="stylesheet" href="assets/css/urbanadmin.css">
+	<style>
+		div.dataTables_wrapper {
+			width: 1280px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="clearfix navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<h1 class="navbar-brand"><img src="assets/images/urban_logo.png" alt="urban admin"/></h1> </div>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="#"><img src="assets/images/logouticon.png" alt="user" />Logout</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<section class="clearfix">
+		<div class="navigation">
+			<ul>
+				<li class="active"><a href="product_season.html">Product Management</a></li>
+				<li> <a href="ordermangement.html">Order Management</a></li>
+				<li> <a href="user_management.html">User Management</a></li>
+				<li> <a href="notification.html">Notification Manager</a></li>
+				<li> <a href="reports.html">Reports</a></li>
+				<li> <a href="masterdata.html">Master Data</a></li>
+			</ul>
+		</div>
+		<div class="fixedwidth">
+			<a class="backbtn" href="product_season.html"> <b>&#x2039;</b> <span>Autumn winter 18</span> </a>
+		</div>
+		<div class="showpage">
+			<div class="clearfix">
+				<div class="productTabs">
+					<ul class="nav nav-tabs">
+						<li><a href="product_categories.html">Categories</a></li>
+						<li><a href="product_products.html">Products</a></li>
+						<li><a href="product_brand-stories.html">Brand Stories</a></li>
+						<li class="active"><a href="product_flash-range.html">Flash Range</a></li>
+					</ul>
+				</div>
+				<div class="tab-content createwrap">
+					<div class="createHead">
+						<h2 class="createTitle">Create Flash Range</h2>
+						<div class="formbtnWrap pull-right"> <a href="product_season.html" title="Cancel" class="btn btn-primary">Cancel</a> <a href="javascript:void(0);" title="Save" class="btn btn-primary bgmbtn" data-toggle="modal" data-target="#modalsave">Save</a> </div>
+					</div>
+					<div class="flashCreate">
+						<form>
+							<ul>
+								<li>
+									<div class="formTitle">Range Name:</div>
+									<div class="formfield">
+										<input type="text" class="rangefield" /> </div>
+								</li>
+								<li class="clearfix img-list">
+									<div class="formTitle ">Image:</div>
+									<div class="formfield flashImage">
+										<a href="javascript:void();" class="browsemage-link"></a>
+										<input id="imageupload" class="browsemage-file hidden" accept="image/jpeg" data-width="200" data-height="200" type="file"> </div>
+								</li>
+								<li class="startdaterow">
+									<div class="formTitle">Start Date:</div>
+									<div class="formfield">
+										<div class="date-editable active">
+											<div class="dateselect">
+												<select class="selectpicker">
+													<option>01</option>
+													<option>02</option>
+													<option>03</option>
+													<option>04</option>
+													<option>05</option>
+													<option>06</option>
+													<option>07</option>
+													<option>08</option>
+													<option>09</option>
+													<option>10</option>
+													<option>11</option>
+													<option>12</option>
+													<option>13</option>
+													<option>14</option>
+													<option>15</option>
+													<option>16</option>
+													<option>17</option>
+													<option>18</option>
+													<option>19</option>
+													<option>20</option>
+													<option>21</option>
+													<option>22</option>
+													<option>23</option>
+													<option>24</option>
+													<option>25</option>
+													<option>26</option>
+													<option>27</option>
+													<option>28</option>
+													<option>29</option>
+													<option>30</option>
+													<option>31</option>
+												</select>
+											</div>
+											<div class="monthselect">
+												<select class="selectpicker" name="month">
+													<option selected="">Jan</option>
+													<option value="2">Feb</option>
+													<option>Mar</option>
+													<option value="4">Apr</option>
+													<option value="5">May</option>
+													<option>June</option>
+													<option value="7">Jul</option>
+													<option value="8">Aug</option>
+													<option>Sep</option>
+													<option value="10">Oct</option>
+													<option value="11">Nov</option>
+													<option>Dec</option>
+												</select>
+											</div>
+											<div class="yearselect">
+												<select class="selectpicker" name="month">
+													<option selected="">2018</option>
+													<option value="2">2017</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="entdaterow">
+									<div class="formTitle">End Date:</div>
+									<div class="formfield">
+										<div class="date-editable active">
+											<div class="dateselect">
+												<select class="selectpicker">
+													<option>01</option>
+													<option>02</option>
+													<option>03</option>
+													<option>04</option>
+													<option>05</option>
+													<option>06</option>
+													<option>07</option>
+													<option>08</option>
+													<option>09</option>
+													<option>10</option>
+													<option>11</option>
+													<option>12</option>
+													<option>13</option>
+													<option>14</option>
+													<option>15</option>
+													<option>16</option>
+													<option>17</option>
+													<option>18</option>
+													<option>19</option>
+													<option>20</option>
+													<option>21</option>
+													<option>22</option>
+													<option>23</option>
+													<option>24</option>
+													<option>25</option>
+													<option>26</option>
+													<option>27</option>
+													<option>28</option>
+													<option>29</option>
+													<option>30</option>
+													<option>31</option>
+												</select>
+											</div>
+											<div class="monthselect">
+												<select class="selectpicker" name="month">
+													<option selected="">Jan</option>
+													<option value="2">Feb</option>
+													<option>Mar</option>
+													<option value="4">Apr</option>
+													<option value="5">May</option>
+													<option>June</option>
+													<option value="7">Jul</option>
+													<option value="8">Aug</option>
+													<option>Sep</option>
+													<option value="10">Oct</option>
+													<option value="11">Nov</option>
+													<option>Dec</option>
+												</select>
+											</div>
+											<div class="yearselect">
+												<select class="selectpicker" name="month">
+													<option selected="">2018</option>
+													<option value="2">2017</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</li>
+							 
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer> </footer>
+	<!-- SAVE MODAL -->
+	<div id="modalsave" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content filtermodal">
+				<div class="modal-header">
+					<button type="button" class="close flyingclose" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div class="savepopupcontent">Are you sure you want to save the Changes.</div>
+				</div>
+				<div class="modal-footer"> <a href="javascript:void(0);" title="Cancel" data-dismiss="modal" class="btn btn-primary noformbtn">Cancel</a> <a href="javascript:void(0);" data-dismiss="modal" title="Done" class="btn btn-primary bgmbtn">OK</a> </div>
+			</div>
+		</div>
+	</div>
+	<!-- CROP MODAL -->
+	<div id="modalcrop" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close flyingclose" data-dismiss="modal">&times;</button>
+					<h2 class="modal-title text-center">Upload Image</h2> </div>
+				<div class="modal-body cropmodal"><small class="loader">Loading...</small>
+					<div class="cropwrap"> <img id="cropimage" src="#" data-crop="#" alt="Picture"> </div>
+					<div class="cropoptions">
+						<div class="docs-buttons">
+							<button type="button" class="btn btn-primary  btn-sm hidden getdropimage" data-method="getCroppedCanvas" data-option="{ &quot;maxWidth&quot;: 4096, &quot;maxHeight&quot;: 4096 }">Get Cropped Canvas</button>
+							<button type="button" class="btn btn-primary btn-sm" data-method="zoom" data-option="0.1" title="Zoom In">Zoom In</button>
+							<button type="button" class="btn btn-primary btn-sm" data-method="zoom" data-option="-0.1" title="Zoom Out">Zoom Out</button>
+							<button type="button" class="btn btn-primary btn-sm" data-method="rotate" data-option="-45" title="Rotate Left">Rotate Left</button>
+							<button type="button" class="btn btn-primary btn-sm" data-method="rotate" data-option="45" title="Rotate Right">Rotate Right</button>
+							<button type="button" class="btn btn-primary btn-sm" data-method="reset" title="Reset">Reset</button>
+							<button type="button" class="btn btn-primary btn-sm" data-method="rotateTo" data-option="180"> Filp</button>
+							<div class="docs-data hidden">
+								<div class="input-group input-group-sm">
+									<label class="input-group-addon" for="dataX">X</label>
+									<input type="text" class="form-control" id="dataX" placeholder="x"> <span class="input-group-addon">px</span> </div>
+								<div class="input-group input-group-sm">
+									<label class="input-group-addon" for="dataY">Y</label>
+									<input type="text" class="form-control" id="dataY" placeholder="y"> <span class="input-group-addon">px</span> </div>
+								<div class="input-group input-group-sm">
+									<label class="input-group-addon" for="dataWidth">Width</label>
+									<input type="text" class="form-control" id="dataWidth" placeholder="width"> <span class="input-group-addon">px</span> </div>
+								<div class="input-group input-group-sm">
+									<label class="input-group-addon" for="dataHeight">Height</label>
+									<input type="text" class="form-control" id="dataHeight" placeholder="height"> <span class="input-group-addon">px</span> </div>
+								<div class="input-group input-group-sm">
+									<label class="input-group-addon" for="dataRotate">Rotate</label>
+									<input type="text" class="form-control" id="dataRotate" placeholder="rotate"> <span class="input-group-addon">deg</span> </div>
+								<div class="input-group input-group-sm">
+									<label class="input-group-addon" for="dataScaleX">ScaleX</label>
+									<input type="text" class="form-control" id="dataScaleX" placeholder="scaleX"> </div>
+								<div class="input-group input-group-sm">
+									<label class="input-group-addon" for="dataScaleY">ScaleY</label>
+									<input type="text" class="form-control" id="dataScaleY" placeholder="scaleY"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer"> <a href="javascript:void(0);" title="Cancel" data-dismiss="modal" class="btn">Cancel</a> <a id="cropdone" href="javascript:void(0);" title="Done" data-dismiss="modal" class="btn btn-primary donemodallink">Done</a> </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/jquerybundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.js"></script>
+	<script type="text/javascript" src="assets/js/classie.js"></script>
+	<script type="text/javascript" src="assets/plugin/slick-1.8.0/slick/slick.min.js"></script>
+	<script type="text/javascript" src="assets/plugin/cropper-master/dist/cropper.min.js"></script>
+	<script type="text/javascript" src="assets/js/drag.js"></script>
+	<script type="text/javascript" src="assets/js/urbanadmin.js"></script>
+	<script type="text/javascript" src="assets/js/urbancrop.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.updatefile .btn').click(function () {
+				$(this).parent('.updatefile').find('#updatefile').click();
+			});
+			$('.replacefile .btn').click(function () {
+				$(this).parent('.replacefile').find('#replacefile').click();
+			});
+			$(".searchwrap b").click(function () {
+				$(".searchwrap input").val("");
+				$(this).hide();
+			});
+			$(".searchwrap input").keyup(function () {
+				if ($(this).val().length == 0) {
+					$(this).parent('.searchwrap').find('b').removeClass('active');
+				}
+				else {
+					$(this).parent('.searchwrap').find('b').addClass('active');
+				}
+			});
+			$('.edit-actionclick').click(function () {
+				$(this).parent('.editbtnwrap').hide();
+				$(this).parent('.editbtnwrap').siblings('.savebtnwrap').show();
+				$(this).parents('.flashfilter').siblings('.tablewrap').find('table td .edit_td').attr('contenteditable', 'true');
+				$(this).parents('.flashfilter').siblings('.tablewrap').find('table td .add-image').children('a').addClass('active');
+				$(this).parents('.flashfilter').siblings('.tablewrap').find('table td .switch').removeClass('dsabl_switch');
+				$(this).parents('.flashfilter').siblings('.tablewrap').find('table td .megrebox').children('.linkbtn').hide();
+				$(this).parents('.flashfilter').siblings('.tablewrap').find('table td .megrebox').children('.mergeselect').show();
+				$(this).parents('.flashfilter').siblings('.tablewrap').find('table th').children('.mergeTitle').show();
+			});
+			$('.cancel-actionclick').click(function () {
+				$(this).parent('.savebtnwrap').hide();
+				$(this).parent('.savebtnwrap').siblings('.editbtnwrap').show();
+				$(this).parents('.flashfilter').siblings('.tablewrap').find('table td .edit_td').attr('contenteditable', 'false');
+				$(this).parents('.flashfilter').siblings('.tablewrap').find('table td .switch').addClass('dsabl_switch');
+				$(this).parents('.flashfilter').siblings('.tablewrap').find('table td .add-image').children('a').removeClass('active');
+				$(this).parents('.flashfilter').siblings('.tablewrap').find('table td .megrebox').children('.linkbtn').show();
+				$(this).parents('.flashfilter').siblings('.tablewrap').find('table td .megrebox').children('.mergeselect').hide();
+				$(this).parents('.flashfilter').siblings('.tablewrap').find('table th').children('.mergeTitle').hide();
+			});
+			'use strict';
+			// RENAME CATEGORY
+			$(".renamelink").on('click', function () {
+				$('.formbtn').show();
+				$('.category-name').removeAttr('disabled').focus();
+				$('.noformbtn, .browsemage-note').hide();
+			});
+			$(".savelink, .cancellink").on('click', function () {
+				$('.formbtn').hide();
+				$('.category-name').attr('disabled', 'disabled');
+				$('.noformbtn, .browsemage-note').show();
+			});
+			// IMAGE CHANGE CATEGORY
+			$(".donemodallink").on('click', function () {
+				$('.formbtn').show();
+				$('.noformbtn, .browsemage-note').hide();
+			});
+			// FILTER
+			$('.filterclick').click(function () {
+				$(this).parents('.flashfilter').find('.filterlistSlide').slideDown();
+				$(this).parents('.flashfilter').find('.filterBtn').addClass('active');
+				$(this).parents('.flashfilter').find('.savebtnwrap, .editbtnwrap').hide();
+			});
+			$('.pro_filter-Click').click(function () {
+				$(this).parents('.flashfilter').find('.filterlistSlide').slideUp();
+				$(this).parents('.flashfilter').find('.filterBtn').removeClass('active');
+				$(this).parents('.flashfilter').find('.editbtnwrap').show();
+			});
+			$('.filterbar-body input').change(function () {
+				var index = $(this).closest('.filterbar').find('input:checked');
+				var countindex = $(this).closest('.filterbar').find('.filterbar-head span');
+				var nameindex = $(this).closest('.filterbar').find('.filterbar-head small');
+				if (index.length >= 1) {
+					countindex.show().html(index.length);
+					var selected = [];
+					$.each(index, function () {
+						selected.push($(this).attr('name'));
+					});
+					nameindex.html(selected.join(', '))
+						//		alert(selected.join(', '));
+				}
+				else {
+					countindex.hide();
+					nameindex.html('');
+				}
+			});
+			$('.filterbar-body input').each(function () {
+				var index = $(this).closest('.filterbar').find('input:checked');
+				var countindex = $(this).closest('.filterbar').find('.filterbar-head span');
+				var nameindex = $(this).closest('.filterbar').find('.filterbar-head small');
+				if (index.length >= 1) {
+					countindex.show().html(index.length);
+					var selected = [];
+					$.each(index, function () {
+						selected.push($(this).attr('name'));
+					});
+					nameindex.html(selected.join(', '))
+						//		alert(selected.join(', '));
+				}
+				else {
+					countindex.hide();
+					nameindex.html('');
+				}
+			});
+			$('.selectpicker').selectpicker();
+			var iCnt = 1;
+			$("#tblData tr").each(function () {
+				var id = "tr" + parseInt(iCnt);
+				$(this).attr("id", id);
+				iCnt++;
+			});
+			$("#tblData").find("tr:even").addClass("even");
+			$("#tblData").find("tr:odd").addClass("odd");
+			$("#tblData").tableDnD({
+				onDragClass: "myDragClass"
+				, onDrop: function (table, row) {
+					$("#tblData").find("tr").removeClass("even odd");
+					$("#tblData").find("tr:even").addClass("even");
+					$("#tblData").find("tr:odd").addClass("odd");
+				}
+			});
+		});
+	</script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#urbantable').DataTable({
+				"paging": false
+				, "scrollCollapse": true
+				, "pageLength": 15
+				, "bLengthChange": false
+				, "bFilter": false
+				, "bScrollInfinite": true
+				, "bScrollCollapse": true
+				, "searching": false
+				, "info": false
+			});
+			$('#producttable').DataTable({
+				"paging": false
+				, "scrollCollapse": true
+				, "pageLength": 15
+				, "bLengthChange": false
+				, "bFilter": false
+				, "bScrollInfinite": true
+				, "bScrollCollapse": true
+				, "searching": false
+				, "info": false
+			});
+		});
+	</script>
+</body>
+
+</html>
